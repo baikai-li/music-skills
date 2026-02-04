@@ -1,0 +1,50 @@
+[project]
+name = "music-skills"
+version = "0.1.0"
+description = "Python CLI tool for music voice conversion and song covering with RVC and UVR"
+authors = [
+    {name = "Baikai Li", email = "baikai-li@github.com"}
+]
+requires-python = ">=3.10"
+dependencies = [
+    "click>=8.1.0",
+    "pyyaml>=6.0",
+    "pydub>=0.25.1",
+    "librosa>=0.10.0",
+    "soundfile>=0.12.1",
+    "numpy>=1.24.0",
+    "tqdm>=4.65.0",
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0",
+    "yt-dlp>=2023.9.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.9.0",
+    "isort>=5.12.0",
+    "mypy>=1.5.0",
+]
+
+[project.scripts]
+music-skills = "music_skills.cli.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
