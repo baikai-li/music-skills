@@ -11,7 +11,7 @@ import numpy as np
 import soundfile as sf
 from tqdm import tqdm
 
-from .config import get_config
+from ..config.config import get_config
 
 logger = logging.getLogger(__name__)
 

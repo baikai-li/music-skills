@@ -8,12 +8,12 @@ from typing import Optional
 
 import click
 
-from .config import get_config, Config
-from .preprocessing.audio import AudioPreprocessor, preprocess_source_files
-from .training.rvc_trainer import RVCTrainer, train_voice_model
-from .inference.rvc_inference import RVCInference, convert_voice
-from .separation.uvr_separator import UVRSeparator, separate_audio
-from .merging.audio_merger import AudioMerger, merge_cover
+from ..config.config import get_config, Config
+from ..preprocessing.audio import AudioPreprocessor, preprocess_source_files
+from ..training.rvc_trainer import RVCTrainer, train_voice_model
+from ..inference.rvc_inference import RVCInference, convert_voice
+from ..separation.uvr_separator import UVRSeparator, separate_audio
+from ..merging.audio_merger import AudioMerger, merge_cover
 from .song_downloader import SongDownloader, search_songs, download_song
 
 # Configure logging

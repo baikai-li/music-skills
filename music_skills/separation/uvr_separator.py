@@ -10,7 +10,7 @@ from typing import Optional, Tuple
 
 from tqdm import tqdm
 
-from .config import get_config
+from ..config.config import get_config
 
 logger = logging.getLogger(__name__)
 
